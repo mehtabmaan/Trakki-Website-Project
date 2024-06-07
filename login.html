@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your gateway to [describe the main purpose or feature of your website]">
+    <title>Welcome to [Your Website Name]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .login {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .login h2 {
+            margin-bottom: 20px;
+        }
+        .btn{
+            width: 106px;
+        }
+        .login-btn{
+            color: #f8f9fa;
+            text-decoration: none;
+        }
+    </style>
+    <body>
+
+   
+    <section class="login">
+        <div class="container">
+            <h2>Login to Your Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">Username/Email</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block login-click"><a href="profile.html" class="login-btn">Login</a></button>
+                <div class="text-center mt-3">
+                    <a href="#">Forgot Password?</a><br>
+                    <a href="signup.html">Don't have an account? Sign Up</a>
+                </div>
+                <div class="social-login text-center mt-3">
+                    <button class="btn btn-danger">Login with Google</button>
+                    <button class="btn btn-primary">Login with Facebook</button>
+                    <button class="btn btn-info">Login with Twitter</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</body>

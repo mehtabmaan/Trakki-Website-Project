@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up to access [describe the main feature or service of your website]">
+    <title>Sign Up - [Your Website Name]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        .signup-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="date"] {
+            padding: 6px;
+        }
+        .form-group select {
+            padding: 6px;
+        }
+        .btn {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .additional-info {
+            display: none;
+        }
+        .login-btn{
+            color: #f8f9fa;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        function toggleAdditionalInfo() {
+            var studentType = document.getElementById('studentType').value;
+            var schoolInfo = document.getElementById('schoolInfo');
+            var collegeInfo = document.getElementById('collegeInfo');
+            
+            if (studentType === 'school') {
+                schoolInfo.style.display = 'block';
+                collegeInfo.style.display = 'none';
+            } else if (studentType === 'college') {
+                schoolInfo.style.display = 'none';
+                collegeInfo.style.display = 'block';
+            } else {
+                schoolInfo.style.display = 'none';
+                collegeInfo.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <form>
+            <div class="form-group">
+                <label for="userName">User Name</label>
+                <input type="text" id="userName" required>
+            </div>
+            <div class="form-group">
+                <label for="fatherName">Father Name</label>
+                <input type="text" id="fatherName" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="Email">Enter your Email Here</label>
+                <input type="text" id="mail" required>
+            </div>
+            <div class="form-group">
+                <label for="studentType">Are you a school student or a college student?</label>
+                <select id="studentType" onchange="toggleAdditionalInfo()" required>
+                    <option value="">Select</option>
+                    <option value="school">School Student</option>
+                    <option value="college">College Student</option>
+                </select>
+            </div>
+            <div id="schoolInfo" class="additional-info">
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <select id="class">
+                        <option value="5">5th Class</option>
+                        <option value="6">6th Class</option>
+                        <option value="7">7th Class</option>
+                        <option value="8">8th Class</option>
+                        <option value="9">9th Class</option>
+                        <option value="10">10th Class</option>
+                        <option value="11">11th Class</option>
+                        <option value="12">12th Class</option>
+                    </select>
+                </div>
+            </div>
+            <div id="collegeInfo" class="additional-info">
+                <div class="form-group">
+                    <label for="graduationName">Graduation Name</label>
+                    <input type="text" id="graduationName">
+                </div>
+                <div class="form-group">
+                    <label for="graduationYear">Graduation Year</label>
+                    <input type="text" id="graduationYear">
+                </div>
+            </div>
+            <button type="submit" class="btn"><a href="profile.html " class=" login-btn">Sign Up</a></button>
+        </form>
+    </div>
+
+</body>
+</html>
